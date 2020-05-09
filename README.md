@@ -5,12 +5,14 @@ This .NET Standard library is an updated take on similar library by [Keith Hill]
 
 ## Example Usage in PowerShell
 ```powershell
+Add-Type -Path 'WinRTUtil.dll'
 [Windows.Storage.StorageFile, Windows.Storage, ContentType = WindowsRuntime] | Out-Null
 $AsyncOperation = [Windows.Storage.StorageFile]::GetFileFromPathAsync("D:\myFile.txt")
 [Windows.Storage.StorageFile] $StorageFile = [WinRTUtil.AsyncOperation[Windows.Storage.StorageFile]]::GetResults($AsyncOperation)
 ```
 
 ```powershell
+Add-Type -Path 'WinRTUtil.dll'
 [Windows.Storage.StorageFile, Windows.Storage, ContentType = WindowsRuntime] | Out-Null
 $AsyncOperation = [Windows.Storage.StorageFile]::GetFileFromPathAsync("D:\myFile.txt")
 [System.Threading.Tasks.Task[Windows.Storage.StorageFile]] $Task = [WinRTUtil.AsyncOperation[Windows.Storage.StorageFile]]::AsTask($AsyncOperation)
