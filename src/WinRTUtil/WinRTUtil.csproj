@@ -5,6 +5,9 @@
     <Authors>Jason Thompson</Authors>
     <Copyright>© 2020 Jason Thompson. All rights reserved.</Copyright>
     <Description>Windows Runtime API Interop Utilities</Description>
+    <Version>1.1.0</Version>
+    <RepositoryUrl>https://github.com/jazuntee/WinRTUtil</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -22,6 +25,13 @@
       <IsWinMDFile>true</IsWinMDFile>
       <Private>false</Private>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
